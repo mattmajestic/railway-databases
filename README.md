@@ -1,4 +1,6 @@
-# FastAPI Apps with Multiple Databases 🚀
+# Railway Free Databases
+
+## FastAPI Apps with Multiple Databases 🚀
 
 Explore a variety of FastAPI applications, each backed by a different database, with Docker Compose. Choose your preferred database and run the respective application effortlessly. 📦
 
