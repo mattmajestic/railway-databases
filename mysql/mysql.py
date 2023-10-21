@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-import mysql.connector
+import pymysql
 from dotenv import load_dotenv
 import os
 import uvicorn
@@ -17,17 +17,17 @@ mysql_database = os.getenv("MYSQLDATABASE")
 mysql_port = os.getenv("MYSQLPORT")
 
 # Create a MySQL connection
-mysql_connection = mysql.connector.connect(
+mysql_connection = pymysql.connect(
     user=mysql_user,
     password=mysql_password,
     host=mysql_host,
     database=mysql_database,
-    port=mysql_port
+    port=int(mysql_port)  # Ensure the port is an integer
 )
 
 @app.get("/")
 async def list_data():
-    cursor = mysql_connection.cursor(dictionary=True)
+    cursor = mysql_connection.cursor(pymysql.cursors.DictCursor)
     cursor.execute("SELECT * FROM majesticcoding")  # Replace 'majesticcoding' with your table name
     data = cursor.fetchall()
     cursor.close()
