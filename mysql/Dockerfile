@@ -12,7 +12,7 @@ COPY requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Expose the port the application runs on
-EXPOSE 8881
+EXPOSE 8884
 
 # Define the command to run your application
 CMD ["uvicorn", "mysql:app", "--host", "0.0.0.0", "--port", "8884"]
