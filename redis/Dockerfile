@@ -11,7 +11,7 @@ COPY . /app
 RUN pip install -r requirements.txt
 
 # Expose the port the application runs on
-EXPOSE 8881
+EXPOSE 8883
 
 # Define the command to run your application
-CMD ["uvicorn", "redis:app", "--host", "0.0.0.0", "--port", "8883"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8883"]
