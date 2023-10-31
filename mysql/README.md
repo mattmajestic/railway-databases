@@ -1,7 +1,7 @@
 # MySQL in 1 Minute with Railway 🐬
 
-Explore your MongoDB data seamlessly with this FastAPI application. 🔍🚀
+Explore your MySQL data seamlessly with this FastAPI application. 🔍🚀
 
 ## List Data in MySQL
 
-List all data in your MongoDB collection by making a GET request to the `/list_data` endpoint.
+List all data in your MySQL collection by making a GET request to the `/list_data` endpoint.
